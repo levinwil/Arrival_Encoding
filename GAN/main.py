@@ -65,7 +65,7 @@ def generate(NUM_PICTURES_TO_GENERATE = 1):
     g.compile(loss='binary_crossentropy', optimizer="SGD")
 
     #load the weights
-    g.load_weights('generator_weights')
+    g.load_weights('../weights/generator_weights')
 
     #provide random noise
     noise = np.random.uniform(-1, 1, (NUM_PICTURES_TO_GENERATE, 100))

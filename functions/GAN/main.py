@@ -65,7 +65,7 @@ def generate(NUM_PICTURES_TO_GENERATE = 1):
     g.compile(loss='binary_crossentropy', optimizer="SGD")
 
     #load the weights
-    g.load_weights('../weights/generator_weights')
+    g.load_weights('../../weights/generator_weights')
 
     #provide random noise
     noise = np.random.uniform(-1, 1, (NUM_PICTURES_TO_GENERATE, 100))
@@ -78,7 +78,7 @@ def generate(NUM_PICTURES_TO_GENERATE = 1):
     for i in range(NUM_PICTURES_TO_GENERATE):
         generated_image = generated_images[i, :, :, 0]*127.5 + 127.5
         Image.fromarray(generated_image.astype(np.uint8)).save(
-            "../alien_images/alien_image_" + str(i) + ".png")
+            "../../alien_images/alien_image_" + str(i) + ".png")
 
 
 if __name__ == "__main__":

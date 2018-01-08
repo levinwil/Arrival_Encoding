@@ -47,50 +47,29 @@ def __generator_model():
 '''
 generate
 
-generates NUM_PICTURES_TO_GENERATE images using the generator model and
-saves those images to the ../alien_images directory
+generates one image using the generator model based off of the input vector
+saves that image to the ../alien_images directory
 
 Parameters
 ____________
-NUM_PICTURES_TO_GENERATE : int
-    the number of pictures you'd like to generate
+v : Numpy array (must be 1 x 100)
+    the vector the
 
 Return
 ____________
 void
 '''
-def generate(NUM_PICTURES_TO_GENERATE = 1):
+def generate(v):
     #load the generator model
     g = __generator_model()
     g.compile(loss='binary_crossentropy', optimizer="SGD")
 
     #load the weights
-    g.load_weights('../../weights/generator_weights')
+    g.load_weights('../weights/generator_weights')
 
-    #provide random noise
-    noise = np.random.uniform(-1, 1, (NUM_PICTURES_TO_GENERATE, 100))
+    #produce an array of alien image based off of the vector
+    generated_images = g.predict(v, verbose=1)
 
-    #produce an array of alien image based off of the random noise
-    generated_images = g.predict(noise, verbose=1)
-
-    #access the images in that array, make them values such that they can be
-    #visible, then save them
-    for i in range(NUM_PICTURES_TO_GENERATE):
-        generated_image = generated_images[i, :, :, 0]*127.5 + 127.5
-        Image.fromarray(generated_image.astype(np.uint8)).save(
-            "../../alien_images/alien_image_" + str(i) + ".png")
-
-
-if __name__ == "__main__":
-    #parse the arguments
-    parser = argparse.ArgumentParser(description='A general image generator.')
-    parser.add_argument("--num_images", help="The number of images you'd like \
-    to generate.", type=int)
-    args = parser.parse_args()
-
-    #if they didn't provide a number of images to generate, generate 1
-    if args.num_images == None:
-        generate(NUM_PICTURES_TO_GENERATE = 1)
-    # if they did provide a number of images to generate, generate that many
-    else:
-        generate(NUM_PICTURES_TO_GENERATE = args.num_images)
+    generated_image = generated_images[0, :, :, 0]*127.5 + 127.5
+    Image.fromarray(generated_image.astype(np.uint8)).save(
+            "../../alien_images/alien_image.png")

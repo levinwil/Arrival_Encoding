@@ -1,9 +1,4 @@
-#NOTE: might need these if raw mapping does not work
-'''
-from gensim.models import Word2Vec
-from sklearn.decomposition import PCA
-from matplotlib import pyplot
-'''
+import numpy as np
 
 def __generate_word_num_tuples():
     vocab_set = list(set(['this', 'is', 'the', 'first', 'sentence', 'for',
@@ -15,6 +10,22 @@ def __generate_word_num_tuples():
     num_vocab = len(vocab_set)
     vocab_tuples = [(vocab_set[i], i * 1.0 / num_vocab) for i in range(num_vocab)]
     return vocab_tuples
+
+'''
+get_vocab
+
+Parameters
+____________
+None
+
+Return
+____________
+nouns : python array
+    The list of nouns
+'''
+def get_vocab():
+    return generate_word_to_num_map().keys()
+
 
 '''
 generate_word_to_num_map
@@ -83,5 +94,8 @@ s : sentence
 '''
 def vec_to_sentence(v):
     vocab_map = generate_num_to_word_map()
-    word_array = map(lambda x: vocab_map.get(x), v)
+    word_array = []
+    for val in v:
+        _, word = min(vocab_map.items(), key=lambda (k, _): abs(k - val))
+        word_array.append(word)
     return " ".join(word_array)

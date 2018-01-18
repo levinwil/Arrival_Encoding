@@ -5,16 +5,13 @@ from keras.layers import Dense
 from keras.layers import Reshape
 from keras.layers.core import Activation
 from keras.layers.normalization import BatchNormalization
-from keras.layers.convolutional import UpSampling2D
-from keras.layers.convolutional import Conv2D, MaxPooling2D
-from keras.layers.core import Flatten
-from keras.optimizers import SGD
-from keras.datasets import mnist
+from keras.layers.convolutional import UpSampling2D, Conv2D
 import numpy as np
-from PIL import Image
 import argparse
 import os
-from PIL import ImageOps
+import sys
+sys.path.append("../utils")
+import word_vector_map as wvm
 
 '''
 generator_model
@@ -48,16 +45,15 @@ def __generator_model():
 generate
 
 generates one image using the generator model based off of the input vector
-saves that image to the ../alien_images directory
 
 Parameters
 ____________
 v : Numpy array (must be 1 x 100)
-    the vector the
+    the vector being used to generate the image
 
 Return
 ____________
-void
+generated_image : numpy array
 '''
 def generate(v):
     #load the generator model
@@ -70,6 +66,4 @@ def generate(v):
     #produce an array of alien image based off of the vector
     generated_images = g.predict(v, verbose=1)
 
-    generated_image = generated_images[0, :, :, 0]*127.5 + 127.5
-    Image.fromarray(generated_image.astype(np.uint8)).save(
-            "../alien_images/alien_image.png")
+    return generated_images[0, :, :, 0]*127.5 + 127.5

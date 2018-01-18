@@ -1,11 +1,7 @@
 import numpy as np
 
 def __generate_word_num_tuples():
-    vocab_set = list(set(['this', 'is', 'the', 'first', 'sentence', 'for',
-                'word2vec', 'this', 'is', 'the', 'second', 'sentence',
-    			'yet', 'another', 'sentence',
-    			'one', 'more', 'sentence',
-    			'and', 'the', 'final', 'sentence']))
+    vocab_set = list(['cat', 'tree', 'apple', 'car', 'mouse'])
 
     num_vocab = len(vocab_set)
     vocab_tuples = [(vocab_set[i], i * 1.0 / num_vocab) for i in range(num_vocab)]

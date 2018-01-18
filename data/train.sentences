@@ -1,264 +1,34 @@
 (lp0
-S'this more'
+S'mouse mouse'
 p1
-aS'this for'
+aS'car cat'
 p2
-aS'yet final'
+aS'apple mouse'
 p3
-aS'word2vec the'
+aS'mouse apple'
 p4
-aS'is the'
+aS'mouse cat'
 p5
-aS'first the'
+aS'apple car'
 p6
-aS'more for'
+aS'apple apple'
 p7
-aS'the word2vec'
+aS'tree car'
 p8
-aS'first this'
+aS'tree tree'
 p9
-aS'is sentence'
+aS'mouse car'
 p10
-aS'yet first'
+aS'cat apple'
 p11
-aS'and final'
+aS'cat car'
 p12
-aS'the this'
+aS'tree mouse'
 p13
-aS'for final'
+aS'tree apple'
 p14
-aS'and is'
+aS'cat tree'
 p15
-aS'yet this'
+aS'car apple'
 p16
-aS'for this'
-p17
-aS'second for'
-p18
-aS'and sentence'
-p19
-aS'is another'
-p20
-aS'final for'
-p21
-aS'yet more'
-p22
-aS'second this'
-p23
-aS'word2vec word2vec'
-p24
-aS'this final'
-p25
-aS'this word2vec'
-p26
-aS'another and'
-p27
-aS'word2vec is'
-p28
-aS'sentence second'
-p29
-aS'the for'
-p30
-aS'is first'
-p31
-aS'final this'
-p32
-aS'second the'
-p33
-aS'is more'
-p34
-aS'and yet'
-p35
-aS'second one'
-p36
-aS'word2vec final'
-p37
-aS'more final'
-p38
-aS'for second'
-p39
-aS'and second'
-p40
-aS'and first'
-p41
-aS'and this'
-p42
-aS'this this'
-p43
-aS'word2vec sentence'
-p44
-aS'final sentence'
-p45
-aS'more second'
-p46
-aS'second final'
-p47
-aS'another for'
-p48
-aS'for first'
-p49
-aS'another first'
-p50
-aS'is this'
-p51
-aS'word2vec more'
-p52
-aS'sentence is'
-p53
-aS'for and'
-p54
-aS'final second'
-p55
-aS'sentence and'
-p56
-aS'first is'
-p57
-aS'one one'
-p58
-aS'the yet'
-p59
-aS'the sentence'
-p60
-aS'yet one'
-p61
-aS'the is'
-p62
-aS'second and'
-p63
-aS'yet sentence'
-p64
-aS'one and'
-p65
-aS'for more'
-p66
-aS'second word2vec'
-p67
-aS'second sentence'
-p68
-aS'one is'
-p69
-aS'another one'
-p70
-aS'for is'
-p71
-aS'first for'
-p72
-aS'this another'
-p73
-aS'the more'
-p74
-aS'more yet'
-p75
-aS'for sentence'
-p76
-aS'one the'
-p77
-aS'this first'
-p78
-aS'final word2vec'
-p79
-aS'is final'
-p80
-aS'sentence first'
-p81
-aS'this sentence'
-p82
-aS'sentence for'
-p83
-aS'word2vec second'
-p84
-aS'more word2vec'
-p85
-aS'is is'
-p86
-aS'word2vec for'
-p87
-aS'second yet'
-p88
-aS'the the'
-p89
-aS'word2vec this'
-p90
-aS'word2vec one'
-p91
-aS'more more'
-p92
-aS'is word2vec'
-p93
-aS'more sentence'
-p94
-aS'one yet'
-p95
-aS'yet is'
-p96
-aS'first another'
-p97
-aS'more the'
-p98
-aS'another final'
-p99
-aS'final is'
-p100
-aS'one second'
-p101
-aS'and the'
-p102
-aS'first sentence'
-p103
-aS'another the'
-p104
-aS'word2vec another'
-p105
-aS'word2vec first'
-p106
-aS'another word2vec'
-p107
-aS'this one'
-p108
-aS'second is'
-p109
-aS'first more'
-p110
-aS'yet word2vec'
-p111
-aS'sentence sentence'
-p112
-aS'final more'
-p113
-aS'sentence yet'
-p114
-aS'final final'
-p115
-aS'for word2vec'
-p116
-aS'sentence one'
-p117
-aS'this yet'
-p118
-aS'more this'
-p119
-aS'first one'
-p120
-aS'the second'
-p121
-aS'this the'
-p122
-aS'second another'
-p123
-aS'second second'
-p124
-aS'more one'
-p125
-aS'one sentence'
-p126
-aS'more another'
-p127
-aS'one final'
-p128
-aS'one for'
-p129
-aS'yet for'
-p130
-aS'for one'
-p131
 a.

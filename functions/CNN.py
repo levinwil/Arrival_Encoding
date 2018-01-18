@@ -32,11 +32,12 @@ def __model(num_words = 2):
         Dense(63, activation='relu'),
         Dense(num_words, activation='softmax')
     ])
+    model.compile(optimizer='sgd', loss='categorical_crossentropy')
     return model
 
 def train(x, y, epochs = 50, batch_size = 32, num_words = 2):
     model = __model(num_words = num_words)
-    model.compile(optimizer='sgd', loss='categorical_crossentropy')
+
     model_info = model.fit(x,
                            y,
                            epochs=epochs,
@@ -47,6 +48,5 @@ def train(x, y, epochs = 50, batch_size = 32, num_words = 2):
 
 def predict(image):
     model = __model()
-    model.compile(optimizer='sgd', loss='categorical_crossentropy')
     model.load_weights("../weights/CNN_weights")
     return model.predict(np.reshape(image, (1, 128, 128, 1)))
